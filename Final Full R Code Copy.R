@@ -409,29 +409,23 @@ for (stockcode in stockcodes) {
     #Calculate Duration
     MedianDurationHFT <-
       median(as.numeric(
-        difftime(time1 = HFTOrders$TimeAction, time2 = HFTOrders$TimeAdded)
-      ))
+        difftime(time1 = HFTOrders$TimeAction, time2 = HFTOrders$TimeAdded)))
     MeanDurationHFT <-
       mean(as.numeric(
-        difftime(time1 = HFTOrders$TimeAction, time2 = HFTOrders$TimeAdded)
-      ))
+        difftime(time1 = HFTOrders$TimeAction, time2 = HFTOrders$TimeAdded)))
     StDevDurationHFT <-
       sd(as.numeric(
-        difftime(time1 = HFTOrders$TimeAction, time2 = HFTOrders$TimeAdded)
-      ))
+        difftime(time1 = HFTOrders$TimeAction, time2 = HFTOrders$TimeAdded)))
     
     MedianDurationNT <-
       median(as.numeric(
-        difftime(time1 = NTOrders$TimeAction, time2 = NTOrders$TimeAdded)
-      ))
+        difftime(time1 = NTOrders$TimeAction, time2 = NTOrders$TimeAdded)))
     MeanDurationNT <-
       mean(as.numeric(
-        difftime(time1 = NTOrders$TimeAction, time2 = NTOrders$TimeAdded)
-      ))
+        difftime(time1 = NTOrders$TimeAction, time2 = NTOrders$TimeAdded)))
     StDevDurationNT <-
       sd(as.numeric(
-        difftime(time1 = NTOrders$TimeAction, time2 = NTOrders$TimeAdded)
-      ))
+        difftime(time1 = NTOrders$TimeAction, time2 = NTOrders$TimeAdded)))
     
     #Filter Matched orders
     MatchedHFT <- HFTOrders %>%
